@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testTimeout=20000"
+    "test": "jest --testTimeout=20000",
+    "start": "node index.js"
   },
   "jest": {
     "testEnvironment": "node",
@@ -17,13 +18,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "flatten": "^1.0.3",
-    "qs": "^6.9.1",
     "request": "^2.88.0",
     "sharp": "^0.24.0"
   },
   "devDependencies": {
     "jest": "^25.1.0",
+    "qs": "^6.9.1",
     "superagent-binary-parser": "^1.0.1",
     "supertest": "^4.0.2"
   }
