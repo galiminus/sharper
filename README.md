@@ -21,4 +21,45 @@ const operations = JSON.stringify(
 ```
 
 
+## Limitations
 
+The following operations are authorized:
+
+```
+const AUTHORIZED_OPERATIONS = [
+  "resize",
+  "extend",
+  "extract",
+  "trim",
+  "rotate",
+  "flip",
+  "flop",
+  "sharpen",
+  "median",
+  "blur",
+  "flatten",
+  "gamma",
+  "negate",
+  "normalize",
+  "convolve",
+  "threshold",
+  "boolean",
+  "linear",
+  "recomb",
+  "modulate",
+  "tint",
+  "greyscale",
+  "grayscale",
+  "toColourSpace",
+  "toColorSpace",
+  "removeAlpha",
+  "ensureAlpha",
+  "extractChannel",
+  "joinChannel",
+  "bandbool",
+  "toFormat",
+  "withMetadata"
+]
+```
+
+The code is really simple (the logic itself is less than 10 lines of code). Please take a look at it you need more information.
