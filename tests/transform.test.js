@@ -95,6 +95,14 @@ describe('Transform Endpoint', () => {
     );
     expect(res.statusCode).toEqual(500)
   });
+
+  it('should not crash on error', async () => {
+    const res = await getTransform(
+      "https://google.com",
+      [{ resize: [{ width: 100, height: 100 }] }, { toFormat: [ 'jpeg' ] }],
+    );
+    expect(res.statusCode).toEqual(200)
+  });
 })
 
 afterEach(() => app.close());

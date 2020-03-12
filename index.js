@@ -38,8 +38,9 @@ const AUTHORIZED_OPERATIONS = [
 ];
 
 const app = Express()
-  .get('/transform', ({ query: { input, operations = '[]' }}, res) => {
-    const pipeline = Sharp();
+  .get('/transform', ({ query: { input, operations = '[]' }}, res, next) => {
+    const pipeline = Sharp()
+    pipeline.on('error', (error) => next(new Error(error)))
     pipeline.pipe(res);
 
     for ({ name, params } of JSON.parse(operations))
