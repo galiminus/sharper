@@ -19,7 +19,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "request": "^2.88.0",
-    "sharp": "^0.24.0"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "jest": "^25.1.0",
